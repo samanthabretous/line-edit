@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>line-edit</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samantha Bretous" />
+    <meta name="geo.country" content="US" />
+    <meta name="dc.language" content="en" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>line-edit</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>   
+    <script src="index.js"></script>
+
 </head>
 <body>
   <div class="row">
@@ -13,9 +22,24 @@
   <div class="row">
     <input type="text" id="command" placeholder="Command >">
     <button type="button" id="execute">Execute</button>
+    <button type="button" id="test">test</button>
   </div>
   <div class="row">
     <div id="error" class="error"></div>
+  </div>
+  <div class="row">
+    <h4>List of available commands</h4>
+    <ul>
+      <li><strong>prepend</strong> => prepend Also</li>
+      <li><strong>append</strong> => append Yay!</li>
+      <li><strong>insert</strong> => insert happy after 2</li>
+      <li><strong>insert</strong> => insert happy before 2</li>
+      <li><strong>replace</strong> => replace 3 with funny</li>
+      <li><strong>swap</strong> => swap 2 with 3</li>
+      <li><strong>delete</strong> => delete 2</li>
+      <li><strong>reverse</strong> => reverse at 6</li>
+      <li><strong>pigLatin</strong> => pigLatin at 3</li>
+    </ul>
   </div>
 </body>
 </html>
