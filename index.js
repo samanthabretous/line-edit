@@ -31,19 +31,43 @@ function doInsert(parts){
 }
 
 function doReplace(parts){
-  
+  checkElements(parts)
+  var indexNumber = Number(parts[1]) 
+  line[indexNumber - 1] = parts[3] 
 }
+
 function doSwap(parts){
+  checkElements(parts)
+  var first = line[ Number(parts[1]) - 1 ] 
+  var second = line[ Number(parts[3]) - 1 ]
+  var temp = first
+  line[ Number(parts[1]) - 1 ] = second
+  line[ Number(parts[3]) - 1 ] = temp
   
 }
+
 function doDelete(parts){
-  
+  checkElements(parts)
+  var deleteNumber = Number(parts[1]) - 1
+  line.splice(deleteNumber, 1)
 }
 function doReverse(parts){
-  
+  checkElements(parts)
+  var stringToReverse = line[ Number(parts[2]) - 1]
+  var reversedString = stringToReverse.split('').reverse().join('')
+  line[ Number(parts[2]) - 1] = reversedString
 }
+
 function doPigLatin(parts){
-  
+  checkElements(parts)
+  var string = line[ Number(parts[2]) - 1]
+  var firstLetter = string[0]
+  var vowels = /([aeiou])/gi;
+  if(vowels.test(firstLetter)){
+    line[ Number(parts[2]) - 1] =string + "yay"
+  } else {
+    line[ Number(parts[2]) - 1] = string.substring(1) + string[0] + "ay"
+  }
 }
 
 /**
